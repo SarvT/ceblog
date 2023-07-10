@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { default: mongoose } = require("mongoose");
+const { mongoose } = require("mongoose");
 const User = require("./models/UserModel");
 const becrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -39,7 +39,10 @@ app.post("/login", async (req, res) => {
         // create token
         jwt.sign({username, id:oldUser._id}, secretSalt, {}, (error, token)=>{
             if (error) throw error;
-            res.cookie("token", token).json('ok');
+            res.cookie("token", token).json({
+              id:oldUser._id,
+              username
+            });
         })
     }else res.status(400).json("user not found!");
   } catch (error) {
@@ -55,6 +58,12 @@ app.get("/profile", (req, res)=>{
       
   })
   res.json(req.cookies);
+})
+
+app.post('/logout', (req, res)=>{
+
+  res.cookie('token', '').json('ok');
+  // res.clearCookie('token').sendStatus(200);
 })
 
 app.listen(4000);
