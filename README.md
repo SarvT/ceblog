@@ -34,4 +34,5 @@ User Authentication: Implemented JWT (JSON Web Tokens) for secure user authentic
 Real-time Updates: Leveraged WebSockets for real-time notifications.
 
 Responsive Design: Developed using modern CSS and responsive design principles.
+
 Explore this repository to access the source code, contribute to its development, or simply to see how a MERN-based blog sharing platform is created.
