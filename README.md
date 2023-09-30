@@ -24,9 +24,14 @@ User Profiles: Personalize your profile with a profile picture, bio, and a colle
 Tech Stack:
 
 Frontend: Built with React for a dynamic and interactive user interface.
+
 Backend: Utilized Node.js and Express.js to create a robust server.
+
 Database: MongoDB for efficient data storage and retrieval.
+
 User Authentication: Implemented JWT (JSON Web Tokens) for secure user authentication.
+
 Real-time Updates: Leveraged WebSockets for real-time notifications.
+
 Responsive Design: Developed using modern CSS and responsive design principles.
 Explore this repository to access the source code, contribute to its development, or simply to see how a MERN-based blog sharing platform is created.
